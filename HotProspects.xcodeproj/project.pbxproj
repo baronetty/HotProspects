@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B3263F0C2B7A7A920078C479 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = B3263F0B2B7A7A920078C479 /* CodeScanner */; };
 		B32D1AEF2B75326A00CEC5B8 /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = B32D1AEE2B75326A00CEC5B8 /* SamplePackage */; };
+		B3AC34C12B86194200C47052 /* ProspectsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC34C02B86194200C47052 /* ProspectsDetailView.swift */; };
 		B3B007372B727E4E00D569FA /* HotProspectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B007362B727E4E00D569FA /* HotProspectsApp.swift */; };
 		B3B007392B727E4E00D569FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B007382B727E4E00D569FA /* ContentView.swift */; };
 		B3B0073B2B727E4F00D569FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B0073A2B727E4F00D569FA /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B3AC34C02B86194200C47052 /* ProspectsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsDetailView.swift; sourceTree = "<group>"; };
 		B3B007332B727E4E00D569FA /* HotProspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B007362B727E4E00D569FA /* HotProspectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProspectsApp.swift; sourceTree = "<group>"; };
 		B3B007382B727E4E00D569FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				B3B007382B727E4E00D569FA /* ContentView.swift */,
 				B3F1C29B2B768EFE00D6D46D /* Prospect.swift */,
 				B3F1C2972B7688EB00D6D46D /* ProspectsView.swift */,
+				B3AC34C02B86194200C47052 /* ProspectsDetailView.swift */,
 				B3F1C2992B76890800D6D46D /* MeView.swift */,
 				B3B0073A2B727E4F00D569FA /* Assets.xcassets */,
 				B3B0073C2B727E4F00D569FA /* Preview Content */,
@@ -163,6 +166,7 @@
 				B3F1C2982B7688EB00D6D46D /* ProspectsView.swift in Sources */,
 				B3B007392B727E4E00D569FA /* ContentView.swift in Sources */,
 				B3B007372B727E4E00D569FA /* HotProspectsApp.swift in Sources */,
+				B3AC34C12B86194200C47052 /* ProspectsDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

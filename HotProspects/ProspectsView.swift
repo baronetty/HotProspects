@@ -12,7 +12,7 @@ import UserNotifications
 
 struct ProspectsView: View {
     enum FilterType {
-        case none, contacted,  uncontacted
+        case none, contacted, uncontacted
     }
     
     @Environment(\.modelContext) var modelContext
@@ -36,12 +36,21 @@ struct ProspectsView: View {
     var body: some View {
         NavigationStack {
             List(prospects, selection: $selectedProspects) { prospect in
-                VStack(alignment: .leading) {
-                    Text(prospect.name)
-                        .font(.headline)
-                    
-                    Text(prospect.emailAddress)
-                        .foregroundStyle(.secondary)
+                VStack {
+                    NavigationLink(destination: ProspectsDetailView(prospect: prospect)) {
+                        VStack(alignment: .leading){
+                            Text(prospect.name)
+                                .font(.headline)
+                            
+                            HStack {
+                                Text(prospect.emailAddress)
+                                    .foregroundStyle(.secondary)
+                                
+                                Image(systemName: prospect.isContacted ? "person.crop.circle.fill.badge.checkmark" : "person.crop.circle.badge.xmark")
+                                    .padding(.leading)
+                            }
+                        }
+                    }
                     
                 }
                 .swipeActions {
@@ -111,9 +120,9 @@ struct ProspectsView: View {
         case .success(let result):
             let details = result.string.components(separatedBy: "\n")
             guard details.count == 2 else { return }
-
+            
             let person = Prospect(name: details[0], emailAddress: details[1], isContacted: false)
-
+            
             modelContext.insert(person)
         case .failure(let error):
             print("Scanning failed: \(error.localizedDescription)")
@@ -135,9 +144,9 @@ struct ProspectsView: View {
             content.subtitle = prospect.emailAddress
             content.sound = UNNotificationSound.default
             
-//            var dateComponents = DateComponents()
-//            dateComponents.hour = 9
-//            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            //            var dateComponents = DateComponents()
+            //            dateComponents.hour = 9
+            //            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
             
